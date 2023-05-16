@@ -1,7 +1,12 @@
 <div class="container">
     <h1>Hastebin</h1>
     <div class="btn-container">
-        <a href="#"><button class="btn">New</button></a>
-        <button class="btn">Save</button>   
+        <a href="/new"><button class="btn">New</button></a>
+
+       <% if (locals.canSave) { %>
+        <button class="btn" type="submit">Save</button>
+       <% } %>
+
+        
     </div>
 </div>

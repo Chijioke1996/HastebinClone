@@ -10,14 +10,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/5.0.0/autosize.min.js"
         integrity="sha512-zibtOTbkMuTivXGk5b8yJFGLIB1jF90NuV7gwNcVWL3xZx/I1HdkXU2pCZhadsuaS5HMUzabvRqK4WmWeKrwUg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Document</title>
+    <title>Create New Document</title>
 </head>
 
 <body>
     <h2>Create New Document</h2>
-    <%- include('_buttons.ejs') %>
+ 
 
-        <form action="/" method="post" class="form">
+        <form action="/save" method="POST" class="form">
+            <%- include('_buttons.ejs', {canSave : true}) %>
 
             <div class="wrapper">
 
@@ -25,7 +26,7 @@
                     &gt;
                 </div>
                 <div class="writeup2">
-                    <textarea name="" id="" autofocus name="value"><%= locals.value %></textarea>
+                    <textarea name="value" id="" autofocus><%= locals.value %></textarea>
                 </div>
             </div>
         </form>
